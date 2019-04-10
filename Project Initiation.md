@@ -35,6 +35,9 @@ Prototype/Sketch:
 - The information should be presented easy to read UI
 
 Breakdown of Tasks:
-- Build User Interface in HTML & CSS. It will have two pages where 1. Form 2. Stock & Article Info - Jaden and Alla
-- Test API calls, read JSON and select the data for the project - Alla
+- Build User Interface in HTML & CSS. It will have two pages:
+    - First Page: Form & Search Button: Alla
+    - Second Page: Stock & Article sections - Jaden
+- Test API calls, read JSON and select the data for the project - Alla to give suggestion to Jaden for second page
 - Build JavaScript for DOM manipulation - Abhishek
+- Once MVP is ready, we all will do the testing and work on each other's part to improve the product.
