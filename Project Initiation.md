@@ -24,13 +24,17 @@ Coding Requirements:
 - Deployed to GitHub
 
 APIs:
-- For Stock Info - Alphavantage
+- For Stock Info - Alphavantage or other Finance APIs
 - For News: Wall Street Journal
 
-Breakdown of Tasks:
+Prototype/Sketch:
 - An user will enter company name and hit 'Search' button in the form
 - There should be a part of page of show news article from atleast two websites
  - User should be able to click name of the website and that information will appear for e.g if user click WSJ - it's article will appear then if user clicks FT then WSJ will disappear and FT articles will replace them
 - There should be a part of page showing stock information
 - The information should be presented easy to read UI
 
+Breakdown of Tasks:
+- Build User Interface in HTML & CSS. It will have two pages where 1. Form 2. Stock & Article Info - Jaden and Alla
+- Test API calls, read JSON and select the data for the project - Alla
+- Build JavaScript for DOM manipulation - Abhishek
