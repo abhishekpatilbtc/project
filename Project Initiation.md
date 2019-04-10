@@ -1,9 +1,8 @@
 # Project Charter
 
-Reasons for undertaking the project
-The plan is to create a project which will use multiple api calls to retrieve stock information, trending articles about the company
-so that an analyst is able to stay up-to-date and search information easily instead of search each website or navigating through them. 
-It's all finance info about the company in one page.
+Reasons for undertaking the project:
+
+- The plan is to create a project which will use HTML, CSS and JavaScript to provide stock information, trending articles when user searches for the company. This interface will be useful to analyst who is looking for latest information and search for it easily.  It's all finance info about the company in one page.
 
 Objectives:
 1. Use atleast two API calls - 1. For Stock Info 2. For News
