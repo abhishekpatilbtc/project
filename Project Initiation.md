@@ -6,8 +6,8 @@ Reasons for undertaking the project:
 
 Objectives:
 1. Use atleast two API calls:
-- For Stock Info 
-- For News
+  - For Stock Info 
+  - For News
 2. Use Ajax to pull data
 3. Will use new library/technolofy that's not discussed in the class : Materialize https://materializecss.com/
 4. Make Polished/Front-end UI
