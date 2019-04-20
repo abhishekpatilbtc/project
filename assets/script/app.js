@@ -2,6 +2,10 @@
  * pulls information from the form and build the query URL
  * @returns {string} URL for NYT API based on form inputs
  */
+
+
+
+
   // API doesn't have a "limit" parameter, so we have to do this ourselves
 var numArticles = 5
 // Function to empty out the articles
@@ -23,17 +27,19 @@ function stockURL() {
 
 function buildQueryURL() {
    // Grab text the user typed into the search input, add to the queryParams object
-  var queryPara = $("#search-term")
+   var queryPara = $("#search-term")
+
   .val()
   .trim();
   
   // queryURL is the url we'll use to query the API
     var queryURL = `https://newsapi.org/v2/everything?q=${queryPara}&domains=nytimes.com&sortBy=publishedAt&apiKey=ee6ef7c523284d20a68b8ac070bfe2a5`;
-  
-  
+
     return queryURL
   }
   
+
+
   $("#run-search").on("click", function() {
     clear();
     // Build the query URL for the ajax request to the NYT API
@@ -116,7 +122,7 @@ function buildQueryURL() {
     .then(function(response){
       console.log(response)
       var stock = response.bestMatches[0];
-      var stockName = stock.
+      var stockName = stock.name
       $('#cname').html(stockName)
 
     })
@@ -290,4 +296,9 @@ $("#bbc-search").on("click", function() {
   })
 });
 
-///Stock Info
+///Landing Page
+
+$("#landingSubmit").on("click", function(event) {
+  event.preventDefault();
+  location.replace("main_page.html")
+})

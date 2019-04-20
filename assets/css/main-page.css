@@ -61,3 +61,15 @@ h1 {
 .btn:hover {
     background-color: gray;
 }
+
+.list-group {
+    text-align: left;
+ }
+ 
+ h5 {
+    font-size: 1rem;
+ }
+ 
+ strong {
+    font-size: 1.2rem;
+ }
