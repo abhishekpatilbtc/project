@@ -13,6 +13,8 @@ function clear() {
   $("#article-section").empty();
 }
 
+//var searchMain = $("#search-term");
+
 function stockURL() {
   
   var queryP = $("#search-term")
@@ -121,9 +123,14 @@ function buildQueryURL() {
     })
     .then(function(response){
       console.log(response)
+      $('#stock-info').empty()
       var stock = response.bestMatches[0];
+      for(let sign in stock) {
+        $('#stock-info').append('<li>' + stock[sign] + '</li>')
+      }
+      console.log(stock)
       var stockName = stock.name
-      $('#cname').html(stockName)
+      //$('#cname').html(searchMain)
 
     })
   })
@@ -301,4 +308,5 @@ $("#bbc-search").on("click", function() {
 $("#landingSubmit").on("click", function(event) {
   event.preventDefault();
   location.replace("main_page.html")
+
 })

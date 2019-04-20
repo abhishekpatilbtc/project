@@ -73,3 +73,15 @@ h1 {
  strong {
     font-size: 1.2rem;
  }
+
+ .bg-light {
+    background-color: #b0bec5 !important;
+ }
+
+ #cname {
+     background: gray
+ }
+
+ p {
+     color: gray;
+ }
