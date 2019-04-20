@@ -3,11 +3,23 @@
  * @returns {string} URL for NYT API based on form inputs
  */
   // API doesn't have a "limit" parameter, so we have to do this ourselves
-var numArticles = 10
+var numArticles = 5
 // Function to empty out the articles
 function clear() {
   $("#article-section").empty();
 }
+
+function stockURL() {
+  
+  var queryP = $("#search-term")
+  .val()
+  .trim();
+
+  var sQueryURL = `https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&function=SYMBOL_SEARCH&keywords=${queryP}&symbol=MSFT&apikey=XA25XZNPCPJFMBLA`
+  console.log (sQueryURL);
+  return sQueryURL
+}
+
 
 function buildQueryURL() {
    // Grab text the user typed into the search input, add to the queryParams object
@@ -27,6 +39,8 @@ function buildQueryURL() {
     // Build the query URL for the ajax request to the NYT API
     var wQueryURL = buildQueryURL();
     console.log(wQueryURL)
+
+    
     // Make the AJAX request to the API - GETs the JSON data at the queryURL.
     // The data then gets passed as an argument to the updatePage function
     $.ajax({
@@ -89,6 +103,26 @@ function buildQueryURL() {
     }
     })
   });
+
+  $("#run-search").on("click", function() {
+    var sQueryURL = stockURL();
+    console.log(sQueryURL)
+
+    $.ajax({
+      url: sQueryURL,
+      contentType: "application/json",
+      method: "GET"
+    })
+    .then(function(response){
+      console.log(response)
+      var stock = response.bestMatches[0];
+      var stockName = stock.
+      $('#cname').html(stockName)
+
+    })
+  })
+
+ 
   
   
 
@@ -255,3 +289,5 @@ $("#bbc-search").on("click", function() {
   }
   })
 });
+
+///Stock Info
